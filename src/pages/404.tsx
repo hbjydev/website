@@ -5,7 +5,7 @@ import InnerLayout from '../components/InnerLayout';
 
 const NotFoundPage = () => {
   return (
-    <Layout>
+    <Layout title="404">
       <InnerLayout>
         <h1>404.</h1>
 

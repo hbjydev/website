@@ -1,6 +1,6 @@
 import * as React from 'react';
-import InnerLayout from "../components/InnerLayout";
-import Layout from "../components/Layout";
+import InnerLayout from '../components/InnerLayout';
+import Layout from '../components/Layout';
 
 type SidebarProps = {
     children: React.ReactChild | React.ReactChild[];
@@ -34,7 +34,7 @@ const rightColumn = (
 
 const Index = () => {
     return (
-        <Layout>
+        <Layout title="Home">
             <InnerLayout leftColumn={leftColumn} rightColumn={rightColumn}>
                 <h1>Welcome to my site.</h1>
 
