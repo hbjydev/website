@@ -26,9 +26,7 @@ a useful resource for others seeking knowledge in the subjects I cover here.
 
 3.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
+    Your copy of the site is now running at http://localhost:8000!
 
 4.  **Learn more**
 
