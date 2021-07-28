@@ -14,7 +14,6 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -33,5 +32,6 @@ module.exports = {
       },
       __key: "pages",
     },
+    "gatsby-transformer-remark"
   ],
 };

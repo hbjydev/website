@@ -7,6 +7,9 @@ module.exports = {
   ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: [ 'Noto Sans', 'sans-serif' ]
+    },
     extend: {
       colors: {
         gray: {
@@ -14,7 +17,7 @@ module.exports = {
           50: '#fbfbfb',
         }
       }
-    },
+    }
   },
   plugins: [],
 }

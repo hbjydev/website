@@ -24,22 +24,13 @@ const leftColumn = (
     </ul>
 );
 
-const rightColumn = (
-    <ul>
-        <SidebarItem href="#" right>Introduction</SidebarItem>
-        <SidebarItem href="#" right>Rocky Linux</SidebarItem>
-        <SidebarItem href="#" right>Downloading migrate2rocky</SidebarItem>
-        <SidebarItem href="#" right>Migrating your system</SidebarItem>
-    </ul>
-);
-
 const Index = () => {
     return (
         <Layout title="Home">
             <div className="max-w-full px-4">
-                <img src="https://images.unsplash.com/photo-1627466717798-1817bbc05bfe" className="max-w-screen-2xl mx-auto h-80 object-cover w-full mb-12 rounded-md shadow-lg" />
+                <img src="https://images.unsplash.com/photo-1627466717798-1817bbc05bfe" className="max-w-screen-2xl mx-auto h-50 md:h-80 object-cover w-full mb-6 md:mb-12 rounded-md shadow-lg" />
             </div>
-            <InnerLayout leftColumn={leftColumn} /*rightColumn={rightColumn}*/>
+            <InnerLayout leftColumn={leftColumn}>
                 <h1>Welcome to my site.</h1>
 
                 <p>
