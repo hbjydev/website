@@ -16,7 +16,9 @@ const Layout = ({ children, title }: LayoutProps) => {
             </Helmet>
             <div className="min-h-screen flex flex-col">
                 <Navbar />
-                {children}
+                <main className="pt-20">
+                    {children}
+                </main>
             </div>
         </>
     );

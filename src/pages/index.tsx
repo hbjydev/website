@@ -5,12 +5,13 @@ import Layout from '../components/Layout';
 type SidebarProps = {
     children: React.ReactChild | React.ReactChild[];
     href: string;
+    right?: boolean;
 }
 
-const SidebarItem = ({ children, href }: SidebarProps) => {
+const SidebarItem = ({ children, href, right = false }: SidebarProps) => {
     return (
         <li>
-            <a className="py-1 flex items-center px-2 border-b border-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 dark:border-gray-700" href={href}>{children}</a>
+            <a className={`block py-2 border-gray-300 dark:border-gray-700 ${right ? 'text-right' : null}`} href={href}>{children}</a>
         </li>
     );
 };
@@ -25,17 +26,20 @@ const leftColumn = (
 
 const rightColumn = (
     <ul>
-        <SidebarItem href="#">Introduction</SidebarItem>
-        <SidebarItem href="#">Rocky Linux</SidebarItem>
-        <SidebarItem href="#">Downloading migrate2rocky</SidebarItem>
-        <SidebarItem href="#">Migrating your system</SidebarItem>
+        <SidebarItem href="#" right>Introduction</SidebarItem>
+        <SidebarItem href="#" right>Rocky Linux</SidebarItem>
+        <SidebarItem href="#" right>Downloading migrate2rocky</SidebarItem>
+        <SidebarItem href="#" right>Migrating your system</SidebarItem>
     </ul>
 );
 
 const Index = () => {
     return (
         <Layout title="Home">
-            <InnerLayout leftColumn={leftColumn} rightColumn={rightColumn}>
+            <div className="max-w-full px-4">
+                <img src="https://images.unsplash.com/photo-1627466717798-1817bbc05bfe" className="max-w-screen-2xl mx-auto h-80 object-cover w-full mb-12 rounded-md shadow-lg" />
+            </div>
+            <InnerLayout leftColumn={leftColumn} /*rightColumn={rightColumn}*/>
                 <h1>Welcome to my site.</h1>
 
                 <p>

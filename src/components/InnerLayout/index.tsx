@@ -9,19 +9,19 @@ type InnerLayoutProps = {
 
 const InnerLayout = ({ children, leftColumn, rightColumn }: InnerLayoutProps) => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 lg:gap-1 flex-grow" id="innerlayout_container">
+        <div className="grid lg:gap-1" id="innerlayout_container">
             { leftColumn ? (
-                <div className="col-span-1 h-full bg-gray-200 dark:bg-gray-800 border-b md:border-b-0 md:border-r border-gray-400 dark:border-gray-700" id="layout_col_left">
+                <div className="px-4 col-span-1 h-full border-b md:border-b-0 border-gray-400 dark:border-gray-700" id="layout_col_left">
                     {leftColumn}
                 </div>
             ) : null }
 
-            <main className="col-span-3 h-full p-8 textformat" id="layout_col_middle">
+            <div className="col-span-3 h-full px-4 md:px-4 lg:px-1 textformat" id="layout_col_middle">
                 {children}
-            </main>
+            </div>
 
             { rightColumn ? (
-                <div className="col-span-1 h-full bg-gray-200 dark:bg-gray-800 border-b md:border-b-0 md:border-l border-gray-400 dark:border-gray-700" id="layout_col_right">
+                <div className="px-4 text-right col-span-1 h-full border-b md:border-b-0 border-gray-400 dark:border-gray-700" id="layout_col_right">
                     {rightColumn}
                 </div>
             ) : null }

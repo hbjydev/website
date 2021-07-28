@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-    @apply font-mono bg-gray-50 text-gray-800
+    @apply font-sans bg-gray-50 text-gray-800
         dark:bg-gray-900 dark:text-gray-300 flex flex-col min-h-screen;
 }
 
@@ -26,11 +26,12 @@ body {
 }
 
 #innerlayout_container {
-        grid-template-areas:
-            'main'
-            'contextual'
-            'content';
-    }
+    @apply max-w-screen-xl mx-auto;
+    grid-template-areas:
+        'main'
+        'contextual'
+        'content';
+}
 
 #innerlayout_container #layout_col_left {
     grid-area: main;
@@ -46,7 +47,6 @@ body {
 
 @media (min-width: 768px) {
     #innerlayout_container {
-        height: calc(100vh - 2em);
         grid-template-areas: 'main content contextual';
         grid-template-columns: 1fr 2fr 1fr;
     }
