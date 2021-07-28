@@ -46,14 +46,9 @@ body {
 
 @media (min-width: 768px) {
     #innerlayout_container {
+        height: calc(100vh - 2em);
         grid-template-areas: 'main content contextual';
         grid-template-columns: 1fr 2fr 1fr;
-    }
-
-    #innerlayout_container #layout_col_left,
-    #innerlayout_container #layout_col_middle,
-    #innerlayout_container #layout_col_right {
-        height: calc(100vh - 2em);
     }
 
     #innerlayout_container #layout_col_right {
