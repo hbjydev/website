@@ -3,17 +3,19 @@ import { Code, GitHub, Twitter } from 'react-feather';
 
 const Navbar = () => {
     const [ scrolled, setScrolled ] = React.useState(false);
-    const onScroll = () => {
-        if (window.scrollY > 0) setScrolled(true);
-        else setScrolled(false);
-    }
 
-    React.useEffect(() => {
-        document.addEventListener('scroll', onScroll);
-        return () => {
-            document.removeEventListener('scroll', onScroll);
+    if (typeof window !== 'undefined') {
+        const onScroll = () => {
+            if (window.scrollY > 0) setScrolled(true);
+            else setScrolled(false);
         }
-    }, [ window.scrollY ]);
+        React.useEffect(() => {
+            document.addEventListener('scroll', onScroll);
+            return () => {
+                document.removeEventListener('scroll', onScroll);
+            }
+        }, [ window.scrollY ]);
+    }
 
     const classes = `fixed w-full h-14 flex items-center text-gray-900 ${scrolled ? 'bg-white dark:bg-gray-800 shadow-md' : 'bg-gray-50 dark:bg-gray-900'} transition-all duration-300 ease-in-out`;
 
