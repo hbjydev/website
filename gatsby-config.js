@@ -14,6 +14,24 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              noInlineHighlight: false,
+              prompt: {
+                user: "root",
+                host: "hbjy-server",
+                global: false,
+              },
+            }
+          }
+        ]
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -32,6 +50,13 @@ module.exports = {
       },
       __key: "pages",
     },
-    "gatsby-transformer-remark"
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: "./content/",
+      },
+      __key: "content",
+    },
   ],
 };

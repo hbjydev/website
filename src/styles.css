@@ -14,21 +14,8 @@ body {
     @apply flex flex-col flex-grow;
 }
 
-.textformat {
-    @apply flex flex-col;
-}
-.textformat h1 {
-    @apply text-3xl font-bold mb-4;
-}
-.textformat p {
-    @apply text-base font-normal my-2 leading-6;
-}
-.textformat a {
-    @apply text-green-500;
-}
-
 #innerlayout_container {
-    @apply max-w-screen-xl mx-auto;
+    @apply grid max-w-md mx-auto sm:max-w-xl md:max-w-screen-xl;
     grid-template-areas:
         'main'
         'contextual'
@@ -63,3 +50,34 @@ body {
         grid-template-columns: 1fr 3fr 1fr;
     } 
 }
+
+/* TYPOGRAPHY */
+.textformat {
+    @apply flex flex-col;
+    max-width: 100% !important;
+}
+
+.textformat .gatsby-highlight { @apply grid }
+.textformat .gatsby-highlight .command-line-prompt { @apply pr-0 mr-0 border-none }
+.textformat .gatsby-highlight .command-line-prompt span:not([data-user]) { @apply hidden }
+.textformat p > code {
+    @apply bg-gray-100 text-gray-500;
+    padding: 2px 5px;
+}
+
+/** Headers **/
+.textformat h1 { @apply text-3xl font-bold mb-4 }
+.textformat h2 { @apply text-2xl font-bold mb-4 mt-8 }
+.textformat h3 { @apply text-3xl font-bold mb-4 }
+.textformat h4 { @apply text-3xl font-bold mb-4 }
+.textformat h5 { @apply text-3xl font-bold mb-4 }
+.textformat h6 { @apply text-3xl font-bold mb-4 }
+
+.textformat p { @apply text-base font-normal my-2 leading-6 }
+
+.textformat ul { @apply list-disc list-inside }
+.textformat ul li { @apply my-2 }
+
+.textformat img { @apply mx-auto }
+
+.textformat a { @apply text-green-500 }
